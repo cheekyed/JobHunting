@@ -152,25 +152,16 @@ def create_calender(service,inputResult):
 	deleteStatement = "DELETE FROM CALENDER WHERE SUMMARY = 'Job Hunting';"
 	if result == None:
 		cursor.execute(insertStatement)
-		conn.commit()
-		conn.close()
 	else:
 		cursor.execute(deleteStatement)
 		cursor.execute(insertStatement)
-		conn.commit()
-		conn.close()
+	conn.commit()
+	conn.close()
 	print('calender id inserted into database')
 	time.sleep(2)
-	return 
+	return createdCalendar['id']
 
-def insert_events(service):
-	try:
-		conn = sqlite3.connect("jobCalender.db")
-	except:
-		sys.exit()
-		print("cannot connect to the database")
-	cursor = conn.cursor()
-	selectStatement = "SELECT CALENDER_ID FROM CALENDER WHERE SUMMARY = 'Job Hunting';"
+def insert_events(service,inputCalenderId):
 	for date,company,role in jobInfo:
 
 		event=	{
@@ -189,11 +180,9 @@ def insert_events(service):
 				}
 				]
 			},
-			"summary": 'Role: ' + role + '\nCompany:' + company
+			"summary": role + '\n'+ company
 			}
-
-		print(event)
-		event = service.events().insert(calendarId=created_calendar['id'], body=event).execute()
+		event = service.events().insert(calendarId=inputCalenderId, body=event).execute()
 		print ('Event created: %s' % (event.get('htmlLink')))
 	return
 
@@ -207,4 +196,5 @@ if __name__ == '__main__':
 	service = setup_calenderApi()
 	result = QueryCalenderId()
 	remove_calender(service,result)
-	create_calender(service,result)
+	currentCalenderId= create_calender(service,result)
+	insert_events(service,currentCalenderId)
