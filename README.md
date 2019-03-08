@@ -1,4 +1,6 @@
 What my script does? 
+
+
 Script web scrapes bookmarked jobs from unsw careers website and chucks data including the role,company and closing application date into
 google calender. Each job has a 3 day pop up reminder from google calenders.
 
