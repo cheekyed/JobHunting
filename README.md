@@ -9,6 +9,7 @@ google calender. Each job has a 3 day pop up reminder from google calenders.
 
 
 Requirements
+
 python3 
 
 Create a python virtual environment for project in the project folder - https://docs.python.org/3/library/venv.html
