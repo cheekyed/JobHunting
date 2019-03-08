@@ -1,2 +1,6 @@
 /venv/*
 
+
+credentials.json
+jobCalender.db
+token.pickle
