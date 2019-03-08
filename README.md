@@ -7,7 +7,6 @@ google calender. Each job has a 3 day pop up reminder from google calenders.
 
 
 
-
 Requirements
 
 python3 
@@ -21,6 +20,11 @@ install python libraries using requirements.txt using this command 'python -m pi
 Need to enable google calender api with your credentials- https://developers.google.com/calendar/quickstart/python 
 
 follow instructions to save credentials.json to project folder 
+
+
+
+
+
 
 
 
