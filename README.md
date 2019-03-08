@@ -7,7 +7,7 @@ google calender. Each job has a 3 day pop up reminder from google calenders.
 
 
 
-Requirements
+############Requirements###################
 
 python3 
 
@@ -28,7 +28,7 @@ follow instructions to save credentials.json to project folder
 
 
 
-Script requires two arguements to run 
+###########Script requires two arguements to run############### 
 
 first arguement zid 
 
