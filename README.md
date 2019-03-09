@@ -13,7 +13,7 @@ python3
 
 Create a python virtual environment for project in the project folder - https://docs.python.org/3/library/venv.html
 
-Need to activate the virtual environment using command 'source activate' in path '/jobHunting/virtualenvironment/Scripts'
+Need to activate the virtual environment using command 'source activate' in path '/JobHunting/virtualenvironment/Scripts'
 
 install python libraries using requirements.txt using this command 'python -m pip install -r requirements.txt'
 
