@@ -1,4 +1,4 @@
-############What my script does? #############
+#What my script does? 
 
 
 Script web scrapes bookmarked jobs from unsw careers website and retrieves data including the role,company and closing application date into google calender. Each job has a 3 day pop up reminder from google calenders.
@@ -6,7 +6,7 @@ Script web scrapes bookmarked jobs from unsw careers website and retrieves data 
 
 
 
-############Requirements###################
+##Requirements
 
 Python3 
 
@@ -27,7 +27,7 @@ Follow instructions to save credentials.json to project folder
 
 
 
-###########Script requires two arguements to run############### 
+##Script requires two arguements to run
 
 First arguement= zid 
 
